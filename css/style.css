@@ -1,0 +1,470 @@
+/* --- Global & Login Styling --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    overflow: hidden;
+}
+
+.illustration-section {
+    flex: 1;
+    background-color: #e6f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.illustration-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-section {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.or-text {
+    padding: 0 15px;
+    color: #888;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.social-button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.google-button {
+    color: #555;
+}
+
+.facebook-button {
+    color: #3b5998;
+}
+
+.signup-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.message-area {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+.message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* --- Dashboard Styling --- */
+.app-container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+}
+
+/* Hanya untuk dashboard.html dan products.html */
+body:has(.app-container) {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 80px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 40px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sidebar-nav .nav-item {
+    color: #6c757d;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar-nav .nav-item:hover,
+.sidebar-nav .nav-item.active {
+    color: #007bff;
+    background-color: #e6f7ff;
+}
+
+/* 🟢 Styling Tombol Logout (Ditambahkan) */
+.logout-button {
+    background: none;
+    border: none;
+    color: #dc3545; /* Warna merah untuk logout */
+    font-size: 20px;
+    padding: 10px;
+    margin-top: auto; /* Mendorong tombol ke bagian bawah sidebar */
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.logout-button:hover {
+    color: #c82333;
+}
+/* ------------------------------------- */
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.summary-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-card .icon-box {
+    background-color: #e6f7ff;
+    color: #007bff;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.summary-card p.title {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0;
+}
+
+.summary-card p.value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+}
+
+.action-area {
+    text-align: left;
+}
+
+.product-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.product-button:hover {
+    background-color: #1e7e34;
+}
+
+.product-button i {
+    margin-right: 8px;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        width: 60px;
+    }
+}
+/* --- Styling Tabel Produk --- */
+
+.product-table-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow-x: auto; /* Untuk responsif jika tabel lebar */
+}
+
+.product-table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.product-table-section th,
+.product-table-section td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table-section th {
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.product-table-section tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling Tombol Aksi Tabel */
+.action-buttons button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.edit-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* 🟢 MODAL STYLING (Untuk Notifikasi Tengah Layar) */
+
+.modal {
+    display: none; /* Awalnya tersembunyi, JS akan mengubahnya menjadi 'flex' */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+
+    /* Properti penting untuk posisi tengah */
+    display: flex; /* Ditambahkan agar posisi tengah bekerja saat JS mengaktifkan */
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px; 
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#confirmYes {
+    background-color: #dc3545; 
+    color: white;
+}
+
+#confirmYes:hover {
+    background-color: #c82333;
+}
+
+#confirmNo {
+    background-color: #ccc; 
+    color: #333;
+}
+
+#confirmNo:hover {
+    background-color: #bbb;
+}
