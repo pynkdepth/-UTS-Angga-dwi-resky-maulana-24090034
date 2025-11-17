@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <link rel="stylesheet" href="CSS/style.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i> </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active"><i class="fas fa-home"></i></a>
+                <a href="products.html" class="nav-item"><i class="fas fa-th-large"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-list-alt"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="nav-item"><i class="fas fa-cog"></i></a>
+            </nav>
+            
+            <button id="logoutButton" class="logout-button">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+
+        <div class="main-content">
+            <header class="header">
+                <h1>Dashboard</h1>
+            </header>
+
+            <section class="summary-cards" id="summaryContainer">
+            </section>
+
+            <div class="action-area">
+                <button id="viewProductsButton" class="product-button">
+                    <i class="fas fa-eye"></i> Lihat Data Produk
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
